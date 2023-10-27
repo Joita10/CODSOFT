@@ -124,30 +124,33 @@ bool check_draw_win(){
 
 int main(){
     
-    cout<<"\t\t*-----Welcome to TICK TACK TOE GAME-----*\n\n";
-    cout<<"ENTER Player 1: ";
-    cin>>n1;
-    cout<<"ENTER Player 2: ";
-    cin>>n2;
-
-    cout<<" Player 1 is [X] "<<n1<<" He/She plays first\n";
-    cout<<" Player 2 is [0] "<<n2<<" He/She plays second\n";
-
-    while(check_draw_win()){
-        Display_board();
-        Play_your_turn();
-        check_draw_win();
-    }
-    if(turn=='x'&&tie==false){
-        cout<<n2<<" WINS!!";
-    }
-    else if(turn=='0'&&tie==false){
-        cout<<n1<<" WINS!!";
-    }
-    else{
-        cout<<"Its a draw!! Play again with us!!";
-    }
-
+   while(true)
+    {  cout<<"\t\t*-----Welcome to TICK TACK TOE GAME-----*\n\n";
+       cout<<"ENTER Player 1: ";
+       cin>>n1;
+       cout<<"ENTER Player 2: ";
+       cin>>n2;
+   
+       cout<<n1<<" is Player 1  [X] \n";
+       cout<<n2<<" is Player 2  [0] \n";
+   
+       while(check_draw_win()){
+           Display_board();
+           Play_your_turn();
+           check_draw_win();
+       }
+       if(turn=='x'&&tie==false){
+           cout<<"\n"<<n2<<" WINS!!\n Play again with us \n\n";
+       }
+       else if(turn=='0'&&tie==false){
+           cout<<"\n"<<n1<<" WINS!!\n Play again with us \n\n";
+       }
+       else{
+           cout<<"\n"<<"Its a draw!! Play again with us!!\n\n";
+       }
+       
+       }
+   
     return 0;
 
 }
