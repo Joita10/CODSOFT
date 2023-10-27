@@ -11,14 +11,17 @@ double calculate(double n1,double n2, char ch){
     
 }
 int main(){
-    double n1,n2;
-    char ch;
-    cout<<"Enter 1st number: ";
-    cin>>n1;
-    cout<<"Enter operator: ";
-    cin>>ch;
-    cout<<"Enter 2nd number: ";
-    cin>>n2;
-    double result =calculate(n1,n2,ch);
-    cout<<n1<<ch<<n2<<"="<<result;
+    
+      while(true)  {
+        double n1,n2;
+        char ch;
+        cout<<"Enter 1st number: ";
+        cin>>n1;
+        cout<<"Enter operator: ";
+        cin>>ch;
+        cout<<"Enter 2nd number: ";
+        cin>>n2;
+        double result =calculate(n1,n2,ch);
+        cout<<n1<<ch<<n2<<"="<<result<<endl;
+        }
 }
